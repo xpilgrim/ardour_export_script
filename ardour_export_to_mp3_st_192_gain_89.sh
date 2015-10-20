@@ -83,7 +83,7 @@ function f_check_package () {
 	fi
 	
 	echo "# Kopieren...\n$filename_mp3\n$target_folder_mp3"
-	cp "${1%%.*}.mp3" $target_folder_mp3$filename_mp3
+	cp "${1%%.*}.mp3" "$target_folder_mp3$filename_mp3"
 	#echo "Exportiert und kopiert: $filename_mp3" | zenity --title="Exportiert " --text-info --width=500 --height=200
 ) | zenity --progress \
            --title="wav to mp3: Datei bearbeiten" --text="..." --width=500 --pulsate --auto-close
