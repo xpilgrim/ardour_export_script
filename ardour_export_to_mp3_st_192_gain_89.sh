@@ -56,7 +56,7 @@ function f_check_package () {
 		zenity --error --text="Ausgewählte Datei ist keine wav-Datei:\n$filename" 
 		exit
 	fi
-	message=$(lame -b 192 -m s -o -S --noreplaygain "$1" "${1%%.*}.mp3" 2>&1 && echo "Ohne_Fehler_beendet")
+	message=$(lame -b 192 -m j -o -S --noreplaygain "$1" "${1%%.*}.mp3" 2>&1 && echo "Ohne_Fehler_beendet")
 	# remove all characters right from 'O'
 	error=${message##*O}
 	if [ "$error" != "hne_Fehler_beendet" ]
