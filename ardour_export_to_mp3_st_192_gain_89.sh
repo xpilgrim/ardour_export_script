@@ -65,7 +65,7 @@ function f_check_package () {
 	fi
 
 	echo "# mp3Gain-Anpassung...\n${filename%%.*}.mp3"
-	message=$(mp3gain -r "${1%%.*}.mp3" 2>&1 && echo "Ohne_Fehler_beendet")
+	message=$(mp3gain "${1%%.*}.mp3" 2>&1 && echo "Ohne_Fehler_beendet")
 	# remove all characters right from 'O'
 	error=${message##*O}
 	if [ "$error" != "hne_Fehler_beendet" ]
